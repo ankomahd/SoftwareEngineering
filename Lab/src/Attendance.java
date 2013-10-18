@@ -34,14 +34,14 @@ public class Attendance extends javax.swing.JFrame {
     }
     
     public static void saveData(Data d){
-        
+        System.out.print(d.firstname);
     }
     
     public static Data readData(){ 
     }
     
-    public static void printAll(){
-        
+    public void printAll(){
+        displayLabel.setText("Anna-Lisa Wrote ALL of this code!!! muhahahaha");
     }
     /**
      * Creates new form Attendance
@@ -73,6 +73,7 @@ public class Attendance extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         exitBtn = new javax.swing.JButton();
         saveBtn = new javax.swing.JButton();
+        displayLabel = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
@@ -133,13 +134,18 @@ public class Attendance extends javax.swing.JFrame {
             }
         });
 
+        displayLabel.setText("Some Information will show here");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
+                .addContainerGap(29, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(displayLabel))
                     .addComponent(saveBtn)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(145, 145, 145)
@@ -180,7 +186,9 @@ public class Attendance extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveBtn)
                     .addComponent(exitBtn))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(displayLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -249,6 +257,7 @@ public class Attendance extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField course;
+    private javax.swing.JLabel displayLabel;
     private javax.swing.JButton exitBtn;
     private javax.swing.JTextField id;
     private javax.swing.JLabel jLabel1;
