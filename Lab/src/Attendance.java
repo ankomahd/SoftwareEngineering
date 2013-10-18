@@ -37,7 +37,13 @@ public class Attendance extends javax.swing.JFrame {
         System.out.print(d.firstname);
     }
     
-    public static Data readData(){ 
+    public Data readData(){ 
+        Data d = new Data();
+        d.firstname = "Anna-Lisa";
+        d.lastname = "Rowie Hammond";
+        d.studentId = 265;
+        d.courseID = "Software Engineering";    
+        return d;
     }
     
     public void printAll(){
