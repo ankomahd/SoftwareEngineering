@@ -29,7 +29,11 @@ public class Attendance extends javax.swing.JFrame {
         return d;
     }
     
-    public static void setData(Data d){
+    public void setData(Data d){
+        name1.setText(d.firstname);
+        name2.setText(d.lastname);
+        id.setText(Integer.toString(d.studentId));
+        course.setText(d.courseID);
         
     }
     
